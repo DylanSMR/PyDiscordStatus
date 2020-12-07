@@ -63,6 +63,7 @@ async def login():
         print("Found token file, checking if it is still valid")
         file = open('token.txt', "r")
         token = file.read()
+        file.close()
         if await update():
             print("Found valid token is file")
             return True
